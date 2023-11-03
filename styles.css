@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Agbalumo', serif;
+    font-weight: 100;
 }
 
 li {
@@ -18,7 +22,14 @@ a {
     margin: auto;
 }
 
+header {
+    height: 100vh;
+    background: url("images/rakesh-sitnoor-_hz8MkLukqU-unsplash.jpg");
+    background-size: cover;
+}
+
 .header-top {
+    padding: 15px;
     height: 10vh;
     display: flex;
     justify-content: space-between;
@@ -56,4 +67,53 @@ a {
     border: none;
     cursor: pointer;
     background-color: transparent;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    height: 70vh;
+}
+
+.header__title {
+    color: white;
+    font-size: 40px;
+    margin-left: 5vw;
+    padding: 15px;
+    border-radius: 5px;
+    letter-spacing: 10px;
+    font-style: Italic;
+    text-decoration: underline;
+    text-transform: full-size-kana;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.guarantees__icon {
+    width: 50px;
+    height: 50px;
+}
+
+.main__guarantees-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__guarantees-list li {
+    display: flex;
+    align-items: center;
+}
+
+.guarantees__text {
+    margin-left: 10px;
+}
+
+.main__products_title {
+    margin: auto;
+}
+
+.guarantees__sub_text {
+    color: #656565;
 }
