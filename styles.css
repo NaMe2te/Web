@@ -17,15 +17,19 @@ a {
     cursor:pointer;
 }
 
+header {
+    height: 100vh;
+    background: url("images/rakesh-sitnoor-_hz8MkLukqU-unsplash.jpg");
+    background-size: cover;
+}
+
 .container {
     width: 1200px;
     margin: auto;
 }
 
-header {
-    height: 100vh;
-    background: url("images/rakesh-sitnoor-_hz8MkLukqU-unsplash.jpg");
-    background-size: cover;
+.text-uppercase {
+    text-transform: uppercase;
 }
 
 .header-top {
