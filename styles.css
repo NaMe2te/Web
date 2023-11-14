@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
 
+:root {
+    --main-text-color: black;
+    --submain-text-color: #656565;
+
+    --font-size-large: 40px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -12,7 +19,7 @@ li {
 }
 
 a {
-    color: black;
+    color: var(--main-text-color);
     text-decoration: none;
     cursor:pointer;
 }
@@ -23,13 +30,13 @@ header {
     background-size: cover;
 }
 
+.text-uppercase {
+    text-transform: uppercase;
+}
+
 .container {
     width: 1200px;
     margin: auto;
-}
-
-.text-uppercase {
-    text-transform: uppercase;
 }
 
 .header-top {
@@ -80,8 +87,8 @@ header {
 }
 
 .header__title {
-    color: white;
-    font-size: 40px;
+    color: var(--main-text-color);
+    font-size: var(--font-size-large);
     margin-left: 5vw;
     padding: 15px;
     border-radius: 5px;
@@ -95,29 +102,60 @@ main {
     margin-top: 100px;
 }
 
-.guarantees__icon {
+.warranty__icon {
     width: 50px;
     height: 50px;
 }
 
-.main__guarantees-list {
+.main__warranties-list {
     display: flex;
     justify-content: space-between;
 }
 
-.main__guarantees-list li {
+.warranty {
     display: flex;
     align-items: center;
-}
-
-.guarantees__text {
-    margin-left: 10px;
 }
 
 .main__products_title {
     margin: auto;
 }
 
-.guarantees__sub_text {
-    color: #656565;
+.warranty__text {
+    margin-left: 10px;
+}   
+
+.warranty__sub_text {
+    color: var(--submain-text-color);
+}
+
+.main__presentation {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: .75fr 1fr;
+    grid-column-gap: 30px;
+}
+
+.presentation__photo {
+    width: 100%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+
+.presentation__description {
+    display: grid;
+    grid-template-rows: 1fr 0.1fr .5fr;
+}
+
+.description__title {
+    padding: 10px;
+    font-size: var(--font-size-large);
+    text-align: center;
+    word-spacing: 15px;
+}
+
+.description__text {
+    text-indent: 50px;
+    line-height: 35px;
+    color: var(--submain-text-color);
+    text-align: center;
 }
