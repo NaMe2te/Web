@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+:root {
+    --main-text-color: black;
+    --submain-text-color: #656565;
+
+    --font-size-large: 40px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Agbalumo', serif;
+    font-weight: 100;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    cursor:pointer;
+}
+
+header {
+    height: 100vh;
+    background: url("images/rakesh-sitnoor-_hz8MkLukqU-unsplash.jpg");
+    background-size: cover;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.header-top {
+    padding: 15px;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__icon {
+    width: 80px;
+    height: 80px;
+}
+
+.logo__name {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.header-bar__navigation li {
+    display: inline;
+    margin-left: 40px;
+}
+
+.header-bar__account_buttons_list li {
+    display: inline;
+    margin-left: 15px;
+}
+
+.header-bar__account_buttons_list button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    height: 70vh;
+}
+
+.header__title {
+    color: var(--main-text-color);
+    font-size: var(--font-size-large);
+    margin-left: 5vw;
+    padding: 15px;
+    border-radius: 5px;
+    letter-spacing: 10px;
+    font-style: Italic;
+    text-decoration: underline;
+    text-transform: full-size-kana;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.warranty__icon {
+    width: 50px;
+    height: 50px;
+}
+
+.main__warranties-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.warranty {
+    display: flex;
+    align-items: center;
+}
+
+.main__products_title {
+    margin: auto;
+}
+
+.warranty__text {
+    margin-left: 10px;
+}   
+
+.warranty__sub_text {
+    color: var(--submain-text-color);
+}
+
+.main__presentation {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: .75fr 1fr;
+    grid-column-gap: 30px;
+}
+
+.presentation__photo {
+    width: 100%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+
+.presentation__description {
+    display: grid;
+    grid-template-rows: 1fr 0.1fr .5fr;
+}
+
+.description__title {
+    padding: 10px;
+    font-size: var(--font-size-large);
+    text-align: center;
+    word-spacing: 15px;
+    text-transform: capitalize;
+}
+
+.description__text {
+    text-indent: 50px;
+    line-height: 35px;
+    color: var(--submain-text-color);
+    text-align: center;
+}
