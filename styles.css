@@ -14,6 +14,10 @@
     font-weight: 100;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 li {
     list-style-type: none;
 }
@@ -25,8 +29,10 @@ a {
 }
 
 header {
-    height: 100vh;
+    height: 110vh;
     background: url("images/rakesh-sitnoor-_hz8MkLukqU-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -35,8 +41,8 @@ header {
 }
 
 .container {
-    width: 1200px;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header-top {
@@ -53,13 +59,13 @@ header {
 }
 
 .logo__icon {
-    width: 80px;
-    height: 80px;
+    width: calc(2vw + 5vh);
+    aspect-ratio: 1;
 }
 
 .logo__name {
     width: 50px;
-    margin-left: 10px;
+    margin-left: 1vw;
 }
 
 .header-bar__navigation li {
@@ -91,30 +97,54 @@ header {
     font-size: var(--font-size-large);
     margin-left: 5vw;
     padding: 15px;
-    border-radius: 5px;
     letter-spacing: 10px;
     font-style: Italic;
     text-decoration: underline;
     text-transform: full-size-kana;
 }
 
+@media (max-width: 768px) {
+    .header__title {
+        font-size: 30px;
+    }
+}
+
+
 main {
     margin-top: 100px;
 }
 
 .warranty__icon {
-    width: 50px;
-    height: 50px;
+    width: calc(2vw + 4vh);
+    aspect-ratio: 1;
 }
 
 .main__warranties-list {
     display: flex;
     justify-content: space-between;
+    padding: .7vw;
+}
+
+@media (max-width: 768px) {
+    .main__warranties-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1vh;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 1vw;
+    }
 }
 
 .warranty {
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .warranty {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .main__products_title {
@@ -133,12 +163,31 @@ main {
     margin-top: 70px;
     display: grid;
     grid-template-columns: .75fr 1fr;
-    grid-column-gap: 30px;
+    grid-column-gap: 3vw;
+}
+
+@media (max-width: 768px) {
+    .main__presentation {
+        display: block;
+        margin-top: 70px;
+    }
 }
 
 .presentation__photo {
-    width: 100%;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+    width: 90%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 5%;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .main__presentation {
+        margin-top: 70px;
+    }
+
+    #first_presentation__photo {
+        display: none;
+    }
 }
 
 .presentation__description {
@@ -155,8 +204,8 @@ main {
 }
 
 .description__text {
+    color: var(--submain-text-color);
     text-indent: 50px;
     line-height: 35px;
-    color: var(--submain-text-color);
     text-align: center;
 }
