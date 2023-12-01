@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="loader.js"></script>
+    <script defer type="text/javascript" src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -27,7 +29,7 @@
                 </nav>
                 <ul class="header-bar__account_buttons_list">
                     <li><button><img src="images/heart-outline.svg" alt="heart-account"></button></li>
-                    <li><button><img src="images/person-outline.svg" alt="person-account"></button></li>
+                    <li><button><img id="person-account" src="images/person-outline.svg" alt="person-account"></button></li>
                     <li><button><img src="images/basket-outline.svg" alt="basket-account"></button></li>
                 </ul>
             </section>
@@ -160,6 +162,7 @@
                 </tr>
             <tbody> 
         </table>
+        <div id="res"></div>
     </footer>
 </body>
 </html>

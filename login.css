@@ -28,7 +28,7 @@ li {
 
 li:first-child {
     margin-left: 0px !important;
-} 
+}
 
 a {
     color: var(--main-text-color);
@@ -249,83 +249,59 @@ main {
     justify-content: center;
 }
 
-@media (max-width: 1024px) {
-    .main__products_title {
-        display: none;
-    }
-
-    footer table {
-        display: none;
-    }    
+.login {
+    width: 30vw;
+    height: 50vh;
+    background-color: white;
+    border-radius: 10%;
+    margin: auto;
 }
 
-table {
-    display: grid;
-    border-collapse: collapse;
-    min-width: 100%;
-    grid-template-columns: 
-      minmax(150px, 1fr)
-      minmax(150px, 1.67fr)
-      minmax(150px, 1.67fr)
-      minmax(150px, 1.67fr)
-      minmax(150px, 3.33fr)
-      minmax(150px, 1.67fr)
-  }
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.login__form {
+    padding: 20px;
+}
   
-  thead,
-  tbody,
-  tr {
-    display: contents;
-  }
-  
-  th,
-  td {
-    padding: 15px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
-  th {
-    position: sticky;
-    top: 0;
-    background: #6c7ae0;
-    text-align: left;
-    font-weight: normal;
-    font-size: 1.1rem;
+.login__button {
+    background-color: #04AA6D;
     color: white;
-  }
-  
-  th:last-child {
-    border: 0;
-  }
-  
-  .resize-handle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: black;
-    opacity: 0;
-    width: 3px;
-    cursor: col-resize;
-  }
-  
-  .resize-handle:hover,
-  .header--being-resized .resize-handle {
-    opacity: 0.5;
-  }
-  
-  th:hover .resize-handle {
-    opacity: 0.3;
-  }
-  
-  td {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #808080;
-  }
-  
-  tr:nth-child(even) td {
-    background: #f8f6ff;
-  }
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+@media screen and (max-width: 300px) {
+    .psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
