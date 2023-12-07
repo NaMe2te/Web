@@ -329,3 +329,11 @@ table {
   tr:nth-child(even) td {
     background: #f8f6ff;
   }
+
+  .button__footer {
+    padding: 1vh;
+  }
+
+  footer {
+    text-align: center;
+  }
