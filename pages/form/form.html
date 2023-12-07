@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    <script defer src="form.js"></script>
+</head>
+<body class="non-active">
+    <main>
+        <table id="customer__table">
+            <thead>
+                <tr>
+                    <th data-type="text-short">First name <span class="resize-handle"></span></th>
+                    <th data-type="text-short">Last name <span class="resize-handle"></span></th>
+                    <th data-type="text-long">Street <span class="resize-handle"></span></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <div class="container">
+            <section class="addition">
+                <button class="addition__button">Make a new purchase</button>
+                <form class="addition__form addition__form-hidden">
+                    <label for="first_name"><b>First name</b></label>
+                    <input id="first_name" type="text" placeholder="First name" name="first_name" required>
+                
+                    <label for="last_name"><b>Last name</b></label>
+                    <input id="last_name" type="text" placeholder="Last name" name="last_name" required>
+
+                    <label for="address"><b>Address</b></label>
+                    <input id="address" type="text" placeholder="Address" name="address" required>
+                        
+                    <button id="make_addition__button" class="addition__button" type="submit">Make</button>
+            
+                    <button class="addition__button cancelbtn" type="button" class="cancelbtn">Cancel</button>
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
