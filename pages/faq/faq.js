@@ -1,3 +1,5 @@
+
+
 let faqSummary = document.querySelector('.faq__summary');
 let answer = document.querySelector('.answer');
 let faqDetails = document.querySelector('.faq__details');
@@ -35,10 +37,20 @@ faqSummary.addEventListener('click', () => {
             })
             .catch(error => {
                 loader.style.display = 'none'
-                const errorEl = document.createElement('li');
-                errorEl.textContent = "⚠ Что-то пошло не так";
-                errorEl.classList.add('error');
-                answer.appendChild(errorEl);
+                Toastify({
+                    text: "⚠ Что-то пошло не так",
+                    duration: 3000,
+                    destination: "",
+                    newWindow: true,
+                    close: true,
+                    gravity: "bottom",
+                    position: "right",
+                    stopOnFocus: true,
+                    style: {
+                        background: "#ff0000",
+                    },
+                    onClick: function() {}
+                }).showToast();
             });
         }, 2000);
     }
