@@ -25,7 +25,7 @@ faqSummary.addEventListener('click', () => {
     
         loader.style.display = 'inline-block'
         setTimeout(() => {
-            fetch(`https://jsonplaceholder.typicode.com/users?_start=1&_limit=${Math.floor(Math.random() * (8 - 4 + 1) + 4)}`)
+            fetch(`https://jsonplaceholder.typicode.com`)
             .then(response => response.json()) 
             .then(data => {
                 loader.style.display = 'none'
