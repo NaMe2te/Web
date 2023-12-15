@@ -44,10 +44,6 @@ header {
     background-size: cover;
 }
 
-main {
-    margin-top: 100px;
-}
-
 .text-uppercase {
     text-transform: uppercase;
 }

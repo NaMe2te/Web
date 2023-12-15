@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+:root {
+    --main-text-color: black;
+    --submain-text-color: #656565;
+
+    --font-size-large: 1.2em;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Agbalumo', serif;
+    font-weight: 100;
+}
+
+html {
+    font-size: calc(10px + 0.390625vw);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    height: 100vh;
+    background: url("../../images/rakesh-sitnoor-_hz8MkLukqU-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li {
+    list-style-type: none;
+}
+
+li:first-child {
+    margin-left: 0px !important;
+}
+
+a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.header-top {
+    padding: 15px;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 517px) {
+    .header-bar__navigation-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 517px) {
+    .header-bar__navigation {
+        display: none;
+    }
+
+    .header-bar__navigation-mobile {
+         display: flex;
+         justify-content: center;
+    }
+
+    .header-bar__navigation-mobile li {
+        display: inline;
+        margin-left: 40px;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__icon {
+    width: calc(2vw + 5vh);
+    aspect-ratio: 1;
+}
+
+.logo__name {
+    width: 50px;
+    margin-left: 1vw;
+}
+
+.header-bar__navigation li {
+    display: inline;
+    margin-left: 40px;
+}
+
+.header-bar__navigation ul li a:hover {
+    transition: .5s;
+    color: var(--submain-text-color);
+}
+
+.header-bar__account_buttons_list li {
+    display: inline;
+    margin-left: 15px;
+}
+
+.header-bar__account_buttons_list button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    height: 70vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq h1 {
+    color: #000000;
+    text-align: center;
+}
+
+.faq__details {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+.faq__summary {
+    padding: .5em 1.3rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    transition: height 1s ease;
+}
+
+.faq__details[open] .faq__summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+.answer {
+    padding: .5em 1em;
+}
+
+.lds-dual-ring {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fa0000 transparent #ff0000 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}   
+
+.error {
+    color: #ff0000;
+}
