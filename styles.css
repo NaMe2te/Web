@@ -3,7 +3,7 @@
 :root {
     --main-text-color: black;
     --submain-text-color: #656565;
-
+    --choose-page-color: #6c7ae0;
     --font-size-large: 1.2em;
 }
 
@@ -50,6 +50,10 @@ main {
 
 .text-uppercase {
     text-transform: uppercase;
+}
+
+.choose-page {
+    color: var(--choose-page-color);    
 }
 
 .container {
@@ -109,7 +113,7 @@ main {
 
 .header-bar__navigation ul li a:hover {
     transition: .5s;
-    color: var(--submain-text-color);
+    color: var(--choose-page-color);
 }
 
 .header-bar__account_buttons_list li {
