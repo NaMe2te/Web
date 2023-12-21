@@ -1,12 +1,10 @@
 (function() {
-    var startTime = performance.now(); 
-
     window.addEventListener('load', function() {
-        var endTime = performance.now(); 
-
-        var loadTime = endTime - startTime; 
-
-        var resultElement = document.getElementById('res');
-        resultElement.innerHTML = 'Время загрузки страницы: ' + loadTime + ' мс';
+        setTimeout(function() {
+            var perfEntries = performance.getEntriesByType('navigation');
+            var loadTime = perfEntries[0].loadEventEnd - perfEntries[0].startTime;
+            var resultElement = document.getElementById('res');
+            resultElement.innerHTML = 'Время загрузки страницы: ' + loadTime + ' мс';
+        });
     });
 })();
