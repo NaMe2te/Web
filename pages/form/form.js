@@ -56,18 +56,12 @@ additionForm.addEventListener('submit', (evt) => {
 });
 
 function createNewTableRow(firstName, lastName, address) {
-    let tr = document.createElement('tr');
-    let firstNameTd = document.createElement('td');
-    firstNameTd.textContent = firstName;
-    tr.appendChild(firstNameTd);
+    let template = document.getElementById('table-template');
+    var clone = template.content.cloneNode(true);
+    var cells = clone.querySelectorAll('td');
 
-    let lastNameTd = document.createElement('td');
-    lastNameTd.textContent = lastName;
-    tr.appendChild(lastNameTd);
-
-    let addressTd = document.createElement('td');
-    addressTd.textContent = address;
-    tr.appendChild(addressTd);
-
-    return tr;
+    cells[0].textContent = firstName;
+    cells[1].textContent = lastName;
+    cells[2].textContent = address;
+    return clone;
 }
