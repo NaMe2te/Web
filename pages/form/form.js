@@ -30,9 +30,11 @@ cancelButton.addEventListener('click', () => {
 additionForm.addEventListener('submit', (evt) => {
     evt.preventDefault(); 
 
+    document.querySelector('.error_section').textContent = '';
+
     let first_name_el = document.getElementById("first_name");
     let last_name_el = document.getElementById("last_name");
-    let address_el = document.getElementById("address")
+    let address_el = document.getElementById("address");
 
     let firstName = first_name_el.value;
     let lastName = last_name_el.value;
@@ -41,6 +43,10 @@ additionForm.addEventListener('submit', (evt) => {
     let table = document.getElementById("customer__table")
     let tbody = table.children[1];
     
+    if (!validationTable(firstName, lastName, address)) {
+        return;
+    }
+
     tbody.appendChild(createNewTableRow(firstName, lastName, address));
 
     let client = { firstName, lastName, address };
@@ -58,10 +64,30 @@ additionForm.addEventListener('submit', (evt) => {
 function createNewTableRow(firstName, lastName, address) {
     let template = document.getElementById('table-template');
     var clone = template.content.cloneNode(true);
-    var cells = clone.querySelectorAll('td');
+    var tdList = clone.querySelectorAll('td');
 
-    cells[0].textContent = firstName;
-    cells[1].textContent = lastName;
-    cells[2].textContent = address;
+    tdList[0].textContent = firstName;
+    tdList[1].textContent = lastName;
+    tdList[2].textContent = address;
     return clone;
+}
+
+function validationTable(firstName, lastName, address) {
+    let error = document.querySelector('.error_section');
+    if (firstName.trim() === '') {
+        error.textContent = 'First name cannot be empty'
+        return false;
+    }
+
+    if (lastName.trim() === '') {
+        error.textContent = 'Last name cannot be empty'
+        return false;
+    }
+
+    if (address.trim() === '') {
+        error.textContent = 'Address cannot be empty'
+        return false;
+    }
+
+    return true;
 }
