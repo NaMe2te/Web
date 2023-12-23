@@ -105,7 +105,7 @@ header {
 
 .header-bar__navigation ul li a:hover {
     transition: .5s;
-    color: var(--submain-text-color);
+    color: var(--active-page-color);
 }
 
 .header-bar__account_buttons_list li {

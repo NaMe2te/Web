@@ -3,13 +3,6 @@ let answer = document.querySelector('.answer');
 let faqDetails = document.querySelector('.faq__details');
 let loader = document.querySelector('.lds-dual-ring');
 
-let home = document.getElementById('home');
-
-let getHome = function() {
-    window.location = '../../index.html';
-}
-home.addEventListener('click', getHome);
-
 faqSummary.addEventListener('click', () => {
     if (!faqDetails.open){
         if (answer.children.length != 0) {
