@@ -52,6 +52,10 @@ main {
     text-transform: uppercase;
 }
 
+.choose-page {
+    color: #6c7ae0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -143,7 +147,6 @@ main {
 }
 
 .warranty__icon {
-    min-width: none;
     width: calc(2vw + 2vh);
     aspect-ratio: 1;
 }
