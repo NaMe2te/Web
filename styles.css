@@ -147,7 +147,6 @@ main {
 }
 
 .warranty__icon {
-    min-width: none;
     width: calc(2vw + 2vh);
     aspect-ratio: 1;
 }
