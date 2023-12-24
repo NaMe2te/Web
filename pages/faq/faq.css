@@ -189,6 +189,14 @@ a {
     color: #ff0000;
 }
 
+.answer {
+    display: flex;
+    flex-direction: column;
+}
+
+.provider__link {
+    color: #5477f5;
+}
 
 .choose-page {
     color:#6c7ae0;

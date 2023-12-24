@@ -2,14 +2,21 @@ let faqSummary = document.querySelector('.faq__summary');
 let answer = document.querySelector('.answer');
 let faqDetails = document.querySelector('.faq__details');
 let loader = document.querySelector('.lds-dual-ring');
+let person_account = document.getElementById('person-account');
+
+person_account.addEventListener('click', () => {
+    window.location = '../login/login.html';
+});
 
 faqSummary.addEventListener('click', () => {
-    if (!faqDetails.open){
-        if (answer.children.length != 0) {
+    if (!faqDetails.open) {
+        if (answer.children.length > 1) {
             while (answer.firstChild) {
-                if (answer.children.length == 0) {
+                if (answer.children.length === 1) {
                     break;
                 }
+
+                console.log(answer.lastChild.nodeName);
                 answer.removeChild(answer.lastChild);
             }
         }
@@ -21,14 +28,18 @@ faqSummary.addEventListener('click', () => {
             .then(data => {
                 loader.style.display = 'none'
                 data.forEach(provider => {
-                    const providerEl = document.createElement('li');
-                    providerEl.textContent = provider.name + " - " + provider.email;
-                    answer.appendChild(providerEl);
+                    let template = document.querySelector('#provider');
+                    let clone = template.content.cloneNode(true);
+                    let providerElement = clone.children[0];
+                    providerElement.children[0].textContent = provider.name
+                    providerElement.children[1].textContent = provider.email;
+                    
+                    answer.appendChild(clone);
                 })
             })
             .catch(error => {
                 loader.style.display = 'none'
-                const errorEl = document.createElement('li');
+                const errorEl = document.createElement('div');
                 errorEl.textContent = "⚠ Что-то пошло не так";
                 errorEl.classList.add('error');
                 answer.appendChild(errorEl);

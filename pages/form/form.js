@@ -63,8 +63,8 @@ additionForm.addEventListener('submit', (evt) => {
 
 function createNewTableRow(firstName, lastName, address) {
     let template = document.getElementById('table-template');
-    var clone = template.content.cloneNode(true);
-    var tdList = clone.querySelectorAll('td');
+    let clone = template.content.cloneNode(true);
+    let tdList = clone.querySelectorAll('td');
 
     tdList[0].textContent = firstName;
     tdList[1].textContent = lastName;

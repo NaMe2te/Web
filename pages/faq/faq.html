@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="faq.css">
     <title>Faq</title>
-    <script defer type="text/javascript" src="/choosePage.js"></script>
-    <script defer type="text/javascript" src="faq.js"></script>
+    <script defer type="text/javascript" src="../../choosePage.js"></script>
 </head>
 <body>
     <header>
@@ -18,15 +17,15 @@
                 </div>
                 <nav class="header-bar__navigation">
                     <ul>
-                        <li><a class="text-uppercase" href="/index.html">home</a></li>
+                        <li><a class="text-uppercase" href="../../index.html">home</a></li>
                         <li><a class="text-uppercase" href="#">shop</a></li>
                         <li><a class="text-uppercase" href="#">blog</a></li>
-                        <li><a class="text-uppercase" href="/pages/faq/faq.html">faq</a></li>
+                        <li><a class="text-uppercase" href="faq.html">faq</a></li>
                     </ul>
                 </nav>
                 <ul class="header-bar__account_buttons_list">
                     <li><button><img src="../../images/heart-outline.svg" alt="heart-account"></button></li>
-                    <li><button><img src="../../images/person-outline.svg" alt="person-account"></button></li>
+                    <li><button><img id="person-account" src="../../images/person-outline.svg" alt="person-account"></button></li>
                     <li><button><img src="../../images/basket-outline.svg" alt="basket-account"></button></li>
                 </ul>
             </section>
@@ -42,7 +41,13 @@
                 <h1>Frequently Asked Questions</h1>
                 <details class="faq__details">
                     <summary class="faq__summary">Кто нам поставляет продукцию?</summary>
-                    <div class="answer"></div>
+                    <div class="answer">
+                        <template id="provider">
+                            <div class="provider">
+                                <span></span> - <a class="provider__link" href="https://mail.google.com/mail/u/0/?pli=1#inbox?compose=new" target="_blank"></a>
+                            </div>
+                        </template>
+                    </div>
                 </details>
             </section>
         </div>
@@ -52,5 +57,7 @@
     </main>    
     <footer>
     </footer>
+
+    <script defer type="text/javascript" src="faq.js"></script>
 </body>
 </html>
