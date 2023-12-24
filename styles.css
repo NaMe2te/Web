@@ -53,7 +53,7 @@ main {
 }
 
 .choose-page {
-    color:#6c7ae0;
+    color: #6c7ae0;
 }
 
 .container {
@@ -147,7 +147,6 @@ main {
 }
 
 .warranty__icon {
-    min-width: none;
     width: calc(2vw + 2vh);
     aspect-ratio: 1;
 }
