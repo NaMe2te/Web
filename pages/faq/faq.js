@@ -1,22 +1,13 @@
-
-
 let faqSummary = document.querySelector('.faq__summary');
 let answer = document.querySelector('.answer');
 let faqDetails = document.querySelector('.faq__details');
 let loader = document.querySelector('.lds-dual-ring');
 
-let home = document.getElementById('home');
-
-let getHome = function() {
-    window.location = '../../index.html';
-}
-home.addEventListener('click', getHome);
-
 faqSummary.addEventListener('click', () => {
     if (!faqDetails.open){
-        if (answer.children.length != 0) {
+        if (answer.children.length != 1) {
             while (answer.firstChild) {
-                if (answer.children.length == 0) {
+                if (answer.children.length == 1) {
                     break;
                 }
                 answer.removeChild(answer.lastChild);
@@ -38,7 +29,7 @@ faqSummary.addEventListener('click', () => {
             .catch(error => {
                 loader.style.display = 'none'
                 Toastify({
-                    text: "⚠ Что-то пошло не так",
+                    text: "Что-то пошло не так",
                     duration: 3000,
                     destination: "",
                     newWindow: true,
