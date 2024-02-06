@@ -5,9 +5,9 @@ let loader = document.querySelector('.lds-dual-ring');
 
 faqSummary.addEventListener('click', () => {
     if (!faqDetails.open){
-        if (answer.children.length != 1) {
+        if (answer.children.length !== 1) {
             while (answer.firstChild) {
-                if (answer.children.length == 1) {
+                if (answer.children.length === 1) {
                     break;
                 }
                 answer.removeChild(answer.lastChild);
@@ -29,18 +29,14 @@ faqSummary.addEventListener('click', () => {
             .catch(error => {
                 loader.style.display = 'none'
                 Toastify({
-                    text: "Что-то пошло не так",
-                    duration: 3000,
-                    destination: "",
-                    newWindow: true,
-                    close: true,
-                    gravity: "bottom",
-                    position: "right",
-                    stopOnFocus: true,
+                    text: "Что-то пошло не так", // text of notification
+                    duration: 3000, // time
+                    close: true, // we can close the notification
+                    gravity: "bottom", // the notification will be at the bottom of page
+                    position: "right", // the notification will be at the right of page
                     style: {
-                        background: "#ff0000",
+                        background: "#ff0000", // our color of the notification
                     },
-                    onClick: function() {}
                 }).showToast();
             });
         }, 2000);
